@@ -1,0 +1,43 @@
+@mixin flexbox-center {
+    display: flex;
+    justify-content: center;   
+}
+
+@mixin flexbox-between {
+    display: flex;
+    justify-content: space-between;   
+}
+
+@mixin flexbox-around {
+    display: flex;
+    justify-content: space-around;   
+}
+
+@mixin flexbox-end {
+    display: flex;
+    justify-content: flex-end;   
+}
+
+@mixin flexbox-start {
+    display: flex;
+    justify-content: flex-start;   
+}
+
+@mixin button {
+    color:  #f6f6f6;
+    background-color: #808287 ;
+    font-family: 'PT Sans Narrow', sans-serif;
+    letter-spacing: 1px;
+}
+
+@mixin button-hover {
+    color: #808287;
+    background-color: #f6f6f6;
+    border: black;
+    border-radius: 10px;
+}
+
+@mixin button-active{
+    transform: scale(1.2);
+}
+

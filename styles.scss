@@ -1,0 +1,331 @@
+@import 'colors';
+@import 'fonts';
+@import 'mixins';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Inicio Estilos Generales */
+
+header{
+    height: 110px;
+    width: 100%;
+    background-color: $main-bg-color;
+}
+
+body{
+    background-color: $secondary-bg-color;
+    flex-wrap: wrap;
+}
+
+p, table, ul, ol, form{
+    color: $text-color;
+    font-family: $main-font;
+    letter-spacing: 1px;
+}
+
+button{
+    color:  $text-color;
+    background-color: $main-bg-color;
+    font-family: $main-font;
+    letter-spacing: 1px;
+}
+
+input, textarea, select{
+    font-family: $main-font;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: $text-color;
+    font-family: $main-font;
+    letter-spacing: 1px;
+}
+
+footer{
+    background-color: $main-bg-color;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    color: $text-color;
+    font-family: $main-font;
+    letter-spacing: 1px;
+}
+
+.retorno {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 50px;
+}
+
+.retorno1:hover, .retorno2:hover, .retorno3:hover, .redes:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+
+
+
+/* Fin Estilos Generales */
+
+/* Inicio Títulos */
+header{
+@include flexbox-between ();
+}
+
+.logo{
+@include flexbox-start ();
+margin-left: 10px;
+margin-top: 8px;
+}
+
+.titulo-index, .titulo-conocenos, .titulo-compranos, .titulo-contactanos{
+@include flexbox-center ();
+margin-left: 125px;
+margin-top: 22px;
+font-family: $secondary-font;
+color: $text-color;
+position: absolute;
+}
+
+.slogan-index{
+    @include flexbox-center ();
+    margin-left: 160px;
+    margin-top: 60px;
+    color: $text-color;
+    font-family: $secondary-font;
+    position: absolute;
+}
+
+.idiomas{
+@include flexbox-end ();
+margin-right: 15px;
+margin-top: 45px;
+}
+
+.ing, .fra, .por{
+margin-left: 10px;
+}
+
+.esp:hover, .ing:hover, .fra:hover, .por:hover{
+transform: scale(1.2);
+
+}
+
+
+/* Fin Títulos */
+/* Inicio Index */
+.menu{
+height: 447px;
+ @include flexbox-center ();
+}
+
+ul{
+margin: 50px 1px 1px 20px;
+line-height: 705px;
+list-style-type: none;
+@include flexbox-center ();
+padding-top: 2px;
+
+}
+
+.li-compranos, .li-contactanos{
+margin-left: 60px;
+
+}
+
+.li-compranos{
+padding-left: 50px;
+padding-right: 50px;
+
+
+}
+
+.pasa-imagenes{
+@include flexbox-between ();
+position: absolute;
+margin-left: -455px;
+}
+
+.imagen-central{
+@include flexbox-center ();
+position: absolute;
+height: 350px;
+width: 200px;
+margin-top: 30px;
+margin-bottom: 10px;
+margin-left: 140px;
+}
+
+.button-left{
+height: 25px;
+width: 25px;
+margin-left: -135px;
+margin-top: 200px;
+}
+
+.button-right{
+height: 25px;
+width: 25px;   
+margin-top: 200px;
+margin-right: -615px;
+
+}
+
+.button-left:hover, .button-right:hover{
+@include button-hover();
+}
+
+.button-left:active, .button-right:active{
+@include button-active();
+
+}
+
+.li-compranos:hover, .li-contactanos:hover, .li-conocenos:hover{
+    transform: scale(1.05);
+}
+
+/* Fin Index */
+/* Inicio Conocenos */
+.menu-conocenos{
+    height: 265px;  
+    
+}
+
+.subt-conocenos{
+    @include flexbox-center ();
+    padding-top: 10px;
+    height: 50px;
+    flex-wrap: wrap;
+    color: $text-color;
+    font-family: $secondary-font;
+       
+}
+
+.subt-conocenos1{
+    @include flexbox-center ();
+    height: 50px;
+    padding-top: 30px;
+    color: $text-color;
+    font-family: $secondary-font;
+}
+
+
+.historia{
+    @include flexbox-center ();
+}
+
+
+.historia{
+    margin: 40px 15px 1px 15px;
+    font-size: 18px;
+    text-align: justify;
+} 
+
+table{
+margin-top: 20px;
+width: 100%;
+}
+
+.sabores{
+    font-size: 20px;
+
+}
+
+.tipos {
+    text-align: center;
+}
+
+/* Fin Conocenos */
+/* Inicio Compranos */
+
+.menu-compranos{
+    height: 411px;
+    @include flexbox-around ();
+    padding-top: 25px;
+}
+
+.table1{
+    @include flexbox-center ();
+    position: absolute;
+}
+
+.table2{
+    @include flexbox-center ();
+    position: absolute;
+    margin-top: 230px;
+}
+
+.position2, .position3{
+    padding-left: 320px;
+    
+}
+
+.comprar{
+line-height: 25px;
+text-align: center;
+}
+
+.titulos{
+    padding-top: 40px;
+    line-height: 30px;
+}
+
+.gin1, .gin2, .gin3, .gin4, .gin5, .gin6{
+position: absolute;
+}
+
+.gin1{
+    margin-left: -560px;
+    padding-top: 15px;
+}
+
+.gin2{
+    margin-left: -155px;
+    padding-top: 15px;
+}
+
+.gin3{
+    margin-left: 250px;
+    padding-top: 15px;
+}
+
+.gin4{
+    margin-left: -560px;
+    padding-top: 225px;
+}
+
+.gin5{
+    margin-left: -155px;
+    padding-top: 225px;
+}
+
+.gin6{
+    margin-left: 250px;
+    padding-top: 225px;
+}
+
+/* Fin Compranos */
+/* Inicio Contactanos */
+
+.menu-contactanos{
+    height: 411px;
+    @include flexbox-center ();
+    padding-top: 25px;
+}
+
+form{
+    line-height: 40px;
+    word-spacing: 5px;
+    text-align: center;
+}
+
+.formulario{
+    font-size:20px;
+}
+
+
